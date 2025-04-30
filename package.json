@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shgtkshruch/PocketCast/issues"
   },
-  "homepage": "https://github.com/shgtkshruch/PocketCast#readme"
+  "homepage": "https://github.com/shgtkshruch/PocketCast#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
 }
