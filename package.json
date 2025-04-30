@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "biome format --write .",
+    "lint": "biome lint --write ."
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "dotenv": "^16.5.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.15.3",
     "tsx": "^4.19.4"
   }

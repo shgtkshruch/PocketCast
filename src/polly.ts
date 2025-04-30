@@ -1,7 +1,15 @@
-import { Engine, LanguageCode, OutputFormat, PollyClient, SynthesizeSpeechCommand, TextType, VoiceId } from "@aws-sdk/client-polly";
-import { writeFile } from "fs/promises";
+import { writeFile } from "node:fs/promises";
+import {
+  Engine,
+  LanguageCode,
+  OutputFormat,
+  PollyClient,
+  SynthesizeSpeechCommand,
+  TextType,
+  VoiceId,
+} from "@aws-sdk/client-polly";
 
-import "dotenv/config"; 
+import "dotenv/config";
 
 const client = new PollyClient({ region: "ap-northeast-1" });
 
@@ -20,7 +28,9 @@ const synthesizeSpeech = async () => {
     const response = await client.send(command);
 
     if (response.AudioStream) {
-      const audioBuffer = Buffer.from(await response.AudioStream.transformToByteArray());
+      const audioBuffer = Buffer.from(
+        await response.AudioStream.transformToByteArray(),
+      );
       await writeFile("output.mp3", audioBuffer);
       console.log("Audio file saved as output.mp3");
     } else {
