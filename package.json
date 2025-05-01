@@ -21,7 +21,10 @@
   "homepage": "https://github.com/shgtkshruch/PocketCast#readme",
   "dependencies": {
     "@aws-sdk/client-polly": "^3.799.0",
-    "dotenv": "^16.5.0"
+    "@mozilla/readability": "^0.6.0",
+    "dompurify": "^3.2.5",
+    "dotenv": "^16.5.0",
+    "jsdom": "^26.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
